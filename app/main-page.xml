@@ -1,0 +1,20 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" loaded="onPageLoaded" class="page">  
+<Page.actionBar>
+  <ActionBar title="My App" icon="" class="action-bar">
+  </ActionBar>
+</Page.actionBar>
+  <StackLayout orientation="vertical">
+    <Button class="btn btn-primary btn-active" text="Get Me Beers" height="50px" tap="beers" />
+    <ListView items="{{ beerList }}" >
+      <ListView.itemTemplate>
+        <StackLayout orientation="horizontal">
+        <Image width="200px" height="200px" src="{{img}}" />
+          <StackLayout orientation="vertical">
+            <Label id="name" text="{{name}}" class="beerName" />
+            <Label id="description" text="{{ description }}" textWrap="true" />
+          </StackLayout>
+        </StackLayout>
+      </ListView.itemTemplate>
+    </ListView>
+  </StackLayout> 
+</Page>
